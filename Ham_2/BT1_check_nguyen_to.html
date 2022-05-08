@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+        function isPrime(N){
+            if(N<2){
+                return false;
+            }
+            let i=2;
+            while (i<N){
+                if(N%i==0){
+                    return false;
+                }
+                i++;
+            }
+
+            return true;
+        }
+
+function out_prime(baonhieu){
+let count=0;
+for(let i=0;i<baonhieu;i++){
+    if(isPrime(i)==true){
+        console.log(i);
+        count++;
+    }
+}
+return count;
+}
+
+let x=out_prime(20);
+        console.log("co tất cả "+x+" so nguyen to ")
+
+
+</script>
+</html>

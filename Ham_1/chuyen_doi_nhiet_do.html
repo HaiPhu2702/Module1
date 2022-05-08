@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<table>
+    <tr>
+        <td>  do F
+            <input id="doF" type="number" onchange="changeDo_F(this.value)">
+        </td>
+    </tr>
+    <tr>
+        <td id="doC">
+            Celcius:
+            <span id="outputCelsius"></span>
+        </td>
+    </tr>
+
+</table>
+</body>
+<script >
+
+    function  changeDo_F(doF){
+        doF=parseFloat(doF)
+        let do_C=(doF-32)/1.8;
+        document.getElementById("outputCelsius").innerHTML=do_C;
+    }
+
+
+
+
+</script>
+</html>

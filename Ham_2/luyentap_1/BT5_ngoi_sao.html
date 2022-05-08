@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ngoisao1" placeholder="nhap ngoi sao">
+<button id="ngoi_sao" onclick="traChomSao()">click_tra_chom_sao</button>
+
+</body>
+<script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2 = ["Ursa Minor", "Tarurus", " Cygnus", " Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function traChomSao(){
+        let text=document.getElementById("ngoisao1").value;
+        let index=find(text,arr1);
+        if(index==-1){
+            alert("ko co")
+        }else {
+            alert(arr2[index])
+        }
+    }
+    function find(text, arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (text == arr[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+</script>
+</html>

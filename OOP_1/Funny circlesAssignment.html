@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle</title>
+</head>
+<body>
+<canvas id="canvas" width="700py" height="700py" style="background: red"></canvas>
+</body>
+<script>
+    let paper=document.getElementById("canvas");
+    let pen=paper.getContext("2d")
+
+    class Circle {
+        constructor(x,y,r,color="red") {
+            this.x=y;
+            this.y=y;
+            this.r=r;
+            this.color=color;
+            this.speedX=10;
+            this.speedY=5;
+        }
+
+        render(canvas){
+            let pen=canvas.getContext("2d")
+            pen.beginPath();
+            pen.arc(this.x,this.y,this.r,0,2*Math.PI,true);
+            pen.fillStyle=this.color
+            pen.stroke();
+            pen.fill();
+            pen.closePath();
+        }
+        move(){
+            this.x+=this.speedX;
+            this.y+=this.speedY;
+        }
+
+    }
+    let circles=[];
+
+    function creatBall(){
+        for (let i = 0; i <10 ; i++) {
+            let x=Math.round(Math.random()*paper.width)
+            let y=Math.round(Math.random()*paper.height)
+            let r=Math.round(Math.random()*70)
+
+            let color=randomColor();
+
+            let speedX=5+Math.random()*15
+            let speedY=5+Math.random()*15
+
+            let circle=new Circle(x,y,r,color)
+
+            this.speedX=speedX;
+            this.speedY=speedY;
+
+            circles.push(circle)
+        }
+    }
+
+    function showBall() {
+        for (let i = 0; i <circles.length ; i++) {
+            circles[i].render(paper);
+        }
+    }
+
+    function randomColor() {
+        let r=Math.random()*255;
+        let g=Math.random()*255;
+        let b=Math.random()*255;
+
+        return `rgb(${r},${g},${b})`
+    }
+    creatBall();
+    showBall();
+
+
+    function main(){
+     pen.clearRect(0,0,paper.width,paper.height);
+        for (let i = 0; i < 10; i++) {
+           if( circles[i].x+circles[i].r>=paper.width ||circles[i].x-circles[i].r<=0){
+               circles[i].speedX=-circles[i].speedX
+           }
+
+           if( circles[i].y+circles[i].r>=paper.width ||circles[i].y-circles[i].r<=0){
+               circles[i].speedY=-circles[i].speedY
+           }
+           circles[i].move();
+           circles[i].render(paper)
+        }
+        requestAnimationFrame(main)
+    }
+    main()
+
+</script>
+</html>

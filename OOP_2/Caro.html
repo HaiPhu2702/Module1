@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="width: 400px">
+    <table id="table" border="1" style=";width: 400px;height: 400px;border-collapse: collapse" >
+
+    </table>
+
+</div>
+
+
+</body>
+
+<script>
+
+    function createBoard(col,row){
+        let str='';
+
+        for (let i = 0; i <col ; i++) {
+          str+=" <tr>"
+            for (let j = 0; j <row ; j++) {
+                str+=`<td id="cell${i}${j}"  onclick="clickcell(${i},${j})" ></td> `
+            }
+          str+="</tr>"
+
+        }
+        document.getElementById("table").innerHTML=str;
+        document.write(str)
+    }
+    createBoard(20,20);
+    let Player1="X";
+    let Player2="O";
+    let turn=Player1;
+
+    function  clickcell(i,j){
+      let  cell=document.getElementById(`cell${i}${j}`)
+        if(cell.innerHTML===''){
+            if(turn===Player1){
+                cell.innerHTML=Player1;
+                turn=Player2
+            }else{
+                cell.innerHTML=Player2;
+                turn=Player1;
+            }
+        }
+
+        checkNgang(i,j);
+        checkDoc(i,j);
+    }
+
+    //  Ham lay gia tri o vua danh
+    function getValueCell(i,j){
+        let cell=document.getElementById(`cell${i}${j}`)
+        return cell.innerHTML;
+    }
+
+    function checkNgang(i,j) {
+
+        let cell = getValueCell(i, j);
+        let x = 1;
+        let count = 1;
+
+        while (cell === getValueCell(i, j + x)) {
+            count++;
+            x++;
+        }
+        x = 1;
+        while (cell === getValueCell(i, j - x)) {
+            count++;
+            x++;
+        }
+
+        if (count >= 5) {
+            document.write("YOU WIN")
+        }
+    }
+
+    function checkDoc(i,j){
+        let cell=getValueCell(i,j);
+        let y=1;
+        let count=1;
+        while(cell===getValueCell(i+y,j)){
+            count++;
+            y++;
+        }
+        y=1;
+        while(cell===getValueCell(i-y,j)){
+            count++;
+            y++;
+        }
+        if(count>=5){
+            document.write("YOU WIN")
+        }
+
+
+    }
+
+function checkCross(i,j){
+        let cell=getValueCell(i,j);
+
+        let x=1;
+        let count=1;
+        while(cell==getValueCell(i+x,j+x)){
+            count++;
+            x++;
+        }
+
+        x=1;
+        while(cell==getValueCell(i-x,j-x)){
+            count++;
+            x++;
+        }
+        if(count>=5){
+            document.write("YOU WIN")
+        }
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    function createArray() {
+        let arr = [];
+        let phantu = +prompt("bao nhieu phan tu: ");
+        for (let i = 0; i < phantu; i++) {
+            arr[i] = +prompt("value:")
+        }
+        return arr;
+    }
+    let arrNgnhap=createArray();
+    console.log(arrNgnhap)
+    let kyTuCanTim = +prompt("nhap ky tu kiem tra xem co trong mang ko???")
+    console.log(kyTuCanTim)
+
+    function findKyTu(kytu,arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == kytu ){
+                count++;
+            }else{
+                return -1
+            }
+        }
+        return count;
+    }
+ let result=findKyTu(kyTuCanTim,arrNgnhap);
+
+ if(result==-1){
+     alert("ko co")
+ }else{
+     console.log("co tồn tại "+result+" lần")
+ }
+
+</script>
+</html>

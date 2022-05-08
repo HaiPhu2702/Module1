@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    let s1 = '2,4,6,8';
+    let s2 = '2,4,6,8';
+
+    function checkGiongNhau(s1, s2) {
+        if (s1.length === s2.length) {
+            for (let i = 0; i < s1.length; i++) {
+
+                if (s1[i] == s2[i]) {
+                    return true
+                } else {
+                    return false;
+                }
+
+            }
+
+        } else {
+            return false;
+        }
+    }
+
+    if (take_value(s1, s2) == true) {
+        console.log("giong nhau")
+    } else {
+        console.log("ko giống nhau")
+    }
+    ;
+
+
+</script>
+
+</html>

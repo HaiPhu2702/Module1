@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<h3>
+    type anything slowly
+</h3>
+<textarea id="text" name="info" rows="5" onkeyup="take_mang()"></textarea>
+
+
+<script>
+    let text = "TOI YEU VIET NAM";
+    let count = 0;
+
+   function take_mang(){
+       document.getElementById("text").value="";
+          count++;
+
+       for(let j=0;j<count;j++){
+           document.getElementById("text").value+=text[j];
+
+           if(j==text.length-1){
+               count=0;
+           }
+       }
+
+   }
+
+
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<input id="text" type="text" >
+
+<button id="add"  onclick="add_element()">add</button>
+
+<button id="display" onclick="display_element()">display</button>
+
+<div id="result"></div>
+
+
+</body>
+
+<script>
+    let array= new Array();
+    let x=0;
+    function add_element(){
+        array[x]=document.getElementById("text").value;
+        alert("element: "+ array[x]+ " đã dc thêm vào mảng ở vị trí "+x)
+        x++;
+        document.getElementById("text").value=" ";
+}
+
+function display_element(){
+    let e= " <hr/>";
+
+        for(let i=0;i<array.length;i++){
+           e +=  "element "+i+" = "+array[i]+"<br/>"
+        }
+        document.getElementById("result").innerHTML=e;
+}
+
+
+
+
+</script>
+
+
+</html>

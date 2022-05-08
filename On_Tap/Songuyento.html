@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function checkNT(so_check) {
+        if (so_check < 2) {
+            return false;
+        }
+        if (so_check == 2) {
+            return true;
+        }
+        let i = 2;
+        while (i < so_check) {
+
+            if (so_check % i == 0) {
+                return false
+            }
+            i++;
+        }
+        return true;
+
+    }
+
+    function In() {
+        let count=0;
+
+        for (let i = 0; i < 1000; i++) {
+            if (checkNT(i)) {
+                console.log(i)
+                count++;
+                if(count==20){
+                    return;
+                }
+            }
+
+        }
+
+    }
+
+    console.log(In())
+
+</script>
+</body>
+</html>

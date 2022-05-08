@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Mobile {
+
+        constructor(Name) {
+            this.name = Name;
+            this.battery = 100;
+            this.inbox = [];
+            this.outbox = [];
+            this.message = ''
+            this.status=false;
+        }
+
+        sendMessage(text,phone){
+            this.message=text;
+            this.outbox.push(this.message);
+            phone.inbox.push(this.message);
+        }
+
+
+
+    }
+
+    let Nokia = new Mobile("Nokia");
+    let Ip=new Mobile("Ip");
+
+Nokia.sendMessage("aloalo",Ip)
+    console.log(Ip.inbox)
+</script>
+</html>

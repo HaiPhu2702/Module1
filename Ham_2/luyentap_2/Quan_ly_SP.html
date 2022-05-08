@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .div1 {
+            width: 70%;
+            /*display: flex;*/
+        }
+
+        h3 {
+            /*margin: auto;*/
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="div1"><h3>quan ly SV</h3></div>
+<div><button style="margin-bottom: 20px" onclick="ADD()">ADD STUDENT</button></div>
+<div>
+    <table id="table" border="1" style="width: 70%"></table>
+</div>
+</body>
+<script>
+
+
+
+    let students = [
+        ["P",16,"HT"],
+        ["T",11,"ND"],
+        ["H",4,"HN"]
+    ];
+
+    function displaySV() {
+       let str = `<tr>
+        <th>STT</th>
+        <th>ho va ten</th>
+        <th>tuoi</th>
+        <th>que quan</th>
+        <th colspan="2">hanh dong</th>
+                </tr> `;
+        for (let i = 0; i < students.length; i++) {
+            str += `<tr>
+               <td>${i +1}</td>
+               <td>${students[i][0]} </td>
+               <td>${students[i][1]} </td>
+               <td>${students[i][2]} </td>
+               <td><button onclick="edit(${i})" >edit</button></td>
+               <td><button onclick="remove(${i})">remove</button></td>
+               </tr> `
+        }
+        document.getElementById("table").innerHTML = str;
+    };
+    displaySV();
+
+    function ADD(){
+        let a=prompt("ten")
+        let b=prompt("tuoi")
+        let c=prompt("quequan")
+        let new_Student=[a,b,c]
+        students.push(new_Student)
+        displaySV();
+
+    };
+
+    function edit(index){
+        let a=prompt("ten")
+        let b=prompt("tuoi")
+        let c=prompt("quequan")
+        let new_Student=[a,b,c]
+
+      students[index]=new_Student
+        displaySV()
+    };
+
+    function remove(index){
+        students.splice(index,1)
+        displaySV()
+    }
+
+</script>
+
+</html>

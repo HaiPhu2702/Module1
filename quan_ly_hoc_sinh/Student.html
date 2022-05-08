@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="CSS/Student.css">
+
+</head>
+<body>
+<div class="Title"><span class="title"><strong>ADD STUDENT</strong></span></div>
+
+<div class="container1">
+
+    <div class="add-student">
+        <table class="table-add-student">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input type="text" id="age"></td>
+            </tr>
+            <tr>
+                <td>Adress</td>
+                <td><input type="text" id="address"></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="save()"> Save</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="list-student">
+        <table class="table-list-student">
+            <thead>
+            <tr>
+                <td>STT</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Address</td>
+                <td colspan="2" class="action">Action</td>
+            </tr>
+            </thead>
+
+            <tbody id="list-student">
+            <tr>
+                <td>1</td>
+                <td>phu</td>
+                <td>25</td>
+                <td>Ht</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+<script src="JS/Student.js"></script>
+<script src="JS/StudentMannager.js"></script>
+<script src="JS/Main.js"></script>
+
+</html>

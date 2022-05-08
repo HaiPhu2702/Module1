@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+
+<img id="bita" style="position:absolute;left:0; top:0;" width="500px" height="300px"
+     src="https://s1.dmcdn.net/v/TMEWa1XUWlLItKx6B/x720" alt="">
+
+</body>
+
+<script>
+    let img = document.getElementById("bita");
+
+    function up_press() {
+
+        img.style.top = parseInt(img.style.top) - 25+ 'px';
+    }
+
+    function down_press() {
+        img.style.top = parseInt(img.style.top) + 25 + 'px';
+    }
+
+    function left_press() {
+        img.style.left = parseInt(img.style.left) - 25 + 'px';
+    }
+
+    function right_press() {
+        img.style.left = parseInt(img.style.left) + 25 + 'px';
+    }
+
+    function ready(){
+        window.addEventListener("keydown",key_board);
+    }
+
+    function key_board(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                left_press();
+                break;
+            case 38:
+                up_press();
+                break;
+            case 39:
+                right_press();
+                break;
+            case 40:
+                down_press();
+                break;
+        }
+
+    }
+
+window.onload=ready();
+
+</script>
+
+</html>

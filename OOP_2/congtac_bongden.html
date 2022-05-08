@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Lamp {
+        constructor(OnOrOff) {
+            this.OnOrOff=OnOrOff;
+        }
+
+        getOn(){
+           if(this.OnOrOff=true) {
+               console.log("den sang")
+           }
+        }
+        getOff(){
+            if(this.OnOrOff=true) {
+                console.log("den tat")
+            }
+        }
+    }
+
+    class button {
+        constructor(OnOrOff,lamp) {
+            this.OnOrOff=OnOrOff;
+            this.lamp=lamp;
+        }
+        bamcongtac(){
+            if(this.OnOrOff==true){
+                this.lamp.getOn();
+            }else{
+                this.lamp.getOff()
+            }
+        }
+    }
+
+    let lamp=new Lamp(true);
+    let buton=new button(true,lamp)
+   let a= buton.bamcongtac();
+    console.log(a)
+
+</script>
+</html>

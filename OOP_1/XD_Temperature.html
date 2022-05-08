@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Temperature{
+
+        constructor(do_C) {
+            this.doC=do_C;
+        }
+        getDoF(){
+            return 9/5*this.doC+32;
+        }
+        getDoK(){
+            return this.doC+273.15
+        }
+
+    }
+
+let a=new Temperature(0)
+
+    console.log(  a.getDoF())
+    console.log(  a.getDoK())
+
+
+</script>
+</html>

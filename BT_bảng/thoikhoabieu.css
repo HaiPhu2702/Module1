@@ -1,0 +1,26 @@
+
+table{
+    width: 100%;
+
+}
+td, th {
+    padding: 20px;
+   border: 1px solid black;
+}
+td{
+   padding: 10px 90px;
+}
+.blue{
+    color: cornflowerblue;
+  border: unset;
+}
+
+.caa{
+    border: unset;
+}
+.vang{
+    background: yellow;
+}
+tr:nth-child(6){
+    background: orange;
+}

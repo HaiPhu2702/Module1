@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+</body>
+<script !src="">
+
+    let a = "radar";
+    let tempt = true;
+
+    function checkPanlyndome(String) {
+        for (let i = 0; i < a.length / 2; i++) {
+
+            if (a.charAt(i) == a.charAt(a.length - 1 - i)) {
+                tempt = true;
+            } else {
+                return false
+            }
+        }
+        if (tempt == true) {
+            return true;
+        }
+    }
+
+    let result = checkPanlyndome(a);
+    console.log(result)
+
+
+</script>
+
+</html>

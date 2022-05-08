@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+    function checkPrime(N) {
+        let i = 2;
+        if (N < 2) {
+            return false;
+        }
+        while (i < N) {
+            if (N % i == 0) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    }
+
+    function in_ra() {
+        let N = +prompt(" số nguyen tố trong khoảng từ 0 -> bao nhiêu: ")
+        let i = 0;
+        let count = 0;
+        while (i < N) {
+            if (checkPrime(i)) {
+                console.log(i);
+                count++;
+            }
+            i++
+        }
+        console.log(` tổng số nguyên tố trong khoảng này = ${count} số`);
+    }
+    in_ra();
+
+
+</script>
+
+</html>

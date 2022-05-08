@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width:400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="board"></div>
+</body>
+<script>
+    const PLAYER1="x";
+    const PLAYER2="o"
+    let turn=PLAYER1;
+    //tạo bảng nhập số cột,hàng
+    let row = +prompt("nhập hàng: ")
+    let col = +prompt("nhập cột: ")
+let table='';
+    function creteBoard(row, col) {
+         table += "<table border='1'>";
+        for (let i = 0; i < row; i++) {
+            table += " <tr>"
+            for (let j = 0; j < col; j++) {
+                table += `<td id="cell-${i}-${j}" onclick='click_cell(${i},${j})'></td>`
+            }
+            table += "</tr>"
+        }
+        table += "</table>"
+        document.write(table)
+    }
+    creteBoard(row, col);
+
+    function click_cell(x,y){
+        let cell=document.getElementById(`cell-${x}-${y}`);
+
+       if(cell.innerHTML===""){
+           if(turn===PLAYER1){
+               cell.innerHTML=PLAYER1;
+               turn=PLAYER2;
+           }else{
+               cell.innerHTML=PLAYER2;
+               turn=PLAYER1;
+           }
+       }
+
+    }
+
+
+</script>
+
+</html>

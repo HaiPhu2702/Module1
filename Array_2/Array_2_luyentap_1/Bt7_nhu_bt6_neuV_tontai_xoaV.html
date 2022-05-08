@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let soV=+prompt("nhap so V: ");
+    let count=0;
+    let arr=[1,2,4,7,9,6];
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]==soV){
+            arr.splice(i,1);
+            count++;
+
+        }
+    }
+
+    if(count=0){
+        console.log("soV is not in the array");
+    }else{
+        console.log("soV is in the array..da bi xoa mang con lai "+arr )
+    }
+
+
+</script>
+</html>

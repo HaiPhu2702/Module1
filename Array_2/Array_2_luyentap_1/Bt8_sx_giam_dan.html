@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    let arr=[4,9,5,10,3,1,6];
+
+    for(let i=0;i<arr.length-1;i++){
+        let max=i;
+        for (let j=i+1;j<arr.length;j++) {
+            if (arr[j] > arr[max]) {
+                max =j ;
+            }
+        }
+            let temp=arr[max];
+            arr[max]=arr[i];
+            arr[i]=temp;
+
+    }
+    console.log(arr)
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [];
+    let soPhanTu = +prompt("bao nhieu phan tu:")
+
+    function create_Array() {
+        for (let i = 0; i < soPhanTu; i++) {
+            arr[i] = +prompt("nhap gia tri mang")
+        }
+        return arr;
+    }
+
+    let arrCreate = create_Array();
+
+    function daoNguoc(arr) {
+        for (let i = 0; i <= arr.length / 2; i++) {
+                let temp = arr[i];
+                arr[i] = arr[arr.length - 1 - i];
+                arr[arr.length - 1 - i] = temp;
+
+        }
+        // console.log(arr)
+         return arr;
+    }
+
+    daoNguoc(arrCreate)
+
+</script>
+
+
+</html>

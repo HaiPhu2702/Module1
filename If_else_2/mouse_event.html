@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<form>
+
+    <img id="myImage"
+         src="https://www.tsn.ca/polopoly_fs/1.1625553!/fileimage/httpImage/image.jpg_gen/derivatives/landscape_620/soccer-ball.jpg">;
+    <p>Click button below to move the image to right</p>
+    <input id="button" type="button" value="click Me">
+
+
+</form>
+<script>
+    let imgObj = document.getElementById("myImage");
+
+    function init() {
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+
+    }
+
+    document.getElementById("button").addEventListener("click", moveRight);
+
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 30 + 'px'
+
+    }
+
+    window.onload = init();
+
+</script>
+
+</body>
+
+</html>

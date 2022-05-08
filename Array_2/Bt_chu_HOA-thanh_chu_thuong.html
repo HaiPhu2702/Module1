@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script !src="">
+let str='Ta La MoT NgUoi ';
+
+let UPPERr='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let lowerr='abcdefghijklmnopqrstuvwxyz';
+
+let result=[];
+
+
+for(let i=0;i<str.length;i++){
+    if(UPPERr.includes(str[i])){
+        result.push(str[i].toLowerCase());
+    }else if(lowerr.includes(str[i])){
+        result.push(str[i].toUpperCase())
+    }else{
+        result.push(str[i])
+    }
+}
+console.log(result.join(''))
+
+
+
+
+</script>
+</html>

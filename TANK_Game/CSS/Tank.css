@@ -1,0 +1,29 @@
+
+#canvas{
+    background: url("https://i.pinimg.com/originals/cb/65/a7/cb65a727b8b8b178b230b51bb4c676f8.jpg") no-repeat;
+    background-size: 650px  550px;
+    display: none;
+    width:700px;
+    height:600px;
+}
+#screen{
+    width: 620px;
+    height: 500px;
+    background:url("https://thuthuatnhanh.com/wp-content/uploads/2021/07/Anh-xe-tang-lam-hinh-nen.jpg")  no-repeat;
+    background-size: 650px  550px;
+
+
+}
+#start{
+    position: absolute;
+    margin-left: 270px;
+    margin-top: 220px;
+    color: #d61b06;
+    background: aqua;
+    border: 4px solid orange ;
+    border-radius: 15px;
+    width: 70px;
+    height: 50px;
+    color: #d61b06;
+    font-size: medium;
+}

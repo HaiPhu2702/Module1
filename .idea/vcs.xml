@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Array_1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Array_2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BT_bảng" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BT_form" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CASE_STUDY_GAME_BALL" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ham_1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ham_2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/If_else_2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JavaScript" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OOP_1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OOP_2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/if_else_switch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/loop" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/loop1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/loop2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Điều Kiện 2" vcs="Git" />
+  </component>
+</project>

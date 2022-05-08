@@ -1,0 +1,37 @@
+.container1{
+    width: auto;
+    height: 200px;
+    background: chartreuse ;
+   display: flex;
+}
+.action{
+    text-align: center;
+}
+.Title{
+    width: auto;
+    background: chartreuse ;
+
+}
+.title{
+    padding-left: 60px;
+    color: blue;
+}
+.list-student{
+margin: 0 auto;
+}
+
+.table-add-student{
+    background: red;
+    border-collapse: collapse;
+}
+
+.table-list-student{
+    background: aqua;
+    border-collapse: collapse;
+}
+.table-list-student tr,th,td{
+    border: 1px solid green;
+}
+
+
+

@@ -1,0 +1,14 @@
+table{
+    background: orange;
+    border-spacing: unset;
+    width: 900px;
+    height: 900px;
+
+}
+
+th,td{
+    border-collapse: collapse;
+}
+td{
+text-align: center;padding-left: 18px;
+}

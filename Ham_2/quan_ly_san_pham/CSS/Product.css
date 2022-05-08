@@ -1,0 +1,25 @@
+.container{
+    width:auto;
+    height: 200px;
+    background: green;
+    margin: 0 auto;
+    display: flex;
+}
+
+.add-product{
+    width: 40%;
+}
+
+/*.list-product{*/
+/*    width: 60%;*/
+/*}*/
+.table-list-product{
+    width: 90%;
+    border: 1px solid red;
+    border-collapse: collapse;
+    text-align: center;
+}
+.table-list-product td,tr,th{
+    border: 1px solid red;
+
+}

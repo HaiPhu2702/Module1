@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  class Mobile {
+
+    constructor(Name) {
+    this.name=Name;
+      this.pin=100;
+      this.inbox=[];
+      this.outbox=[];
+      this.message='';
+      this.status=false;
+    }
+
+    writeMessage(text){
+        if(this.status==false){
+            return;
+        }
+      this.message=text;
+    }
+
+    sendMessage(phone){
+        if(this.status==false){
+            return;
+        }
+      this.outbox.push(this.message);
+      phone.inbox.push((this.message))
+    }
+    turoff(){
+            return this.status = false;
+    }
+    turon(){
+            return this.status = true;
+    }
+
+  }
+
+  let SamSung=new Mobile("SamSung")
+  let Ip=new Mobile("Iphone");
+
+  SamSung.turoff();
+  SamSung.turon();
+  console.log(SamSung.writeMessage("helooooo"))
+
+
+
+
+
+
+
+
+
+</script>
+</html>
